@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,103 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreML_Lab" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-jB-V7D">
+                                <rect key="frame" x="108.5" y="44" width="197" height="29"/>
+                                <segments>
+                                    <segment title="Create"/>
+                                    <segment title="Settings"/>
+                                    <segment title="Learn"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2bF-HC-DfR"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSW-Q5-aAS" customClass="UIImageView">
+                                <rect key="frame" x="20" y="80" width="374" height="32"/>
+                                <color key="backgroundColor" red="0.91162357230000002" green="0.91162357230000002" blue="0.91162357230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="YiM-SK-MH4"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IE5-uS-WPi" appends="YES" id="q4H-pa-QMX"/>
+                                    <outletCollection property="gestureRecognizers" destination="P7b-dO-LkS" appends="YES" id="IGc-i5-19F"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSU-ql-b9x" customClass="UIImageView">
+                                <rect key="frame" x="20" y="120" width="374" height="710.5"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="65N-ka-beb" appends="YES" id="AGG-XJ-bkr"/>
+                                    <outletCollection property="gestureRecognizers" destination="IrY-by-I60" appends="YES" id="gvB-xn-V3O"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-3t-Z0J">
+                                <rect key="frame" x="134.5" y="832" width="145" height="30"/>
+                                <state key="normal" title="Paste from Clipboard"/>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvV-JE-mSo" userLabel="CML View">
+                                <rect key="frame" x="20" y="120" width="374" height="710.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fvV-JE-mSo" firstAttribute="top" secondItem="pSW-Q5-aAS" secondAttribute="bottom" constant="8" symbolic="YES" id="2Eb-ci-0jP"/>
+                            <constraint firstItem="eSU-ql-b9x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7gM-I3-p75"/>
+                            <constraint firstItem="eSU-ql-b9x" firstAttribute="top" secondItem="pSW-Q5-aAS" secondAttribute="bottom" constant="8" id="D17-zo-Bmi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HxR-3t-Z0J" secondAttribute="bottom" id="JcH-jm-cYp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSU-ql-b9x" secondAttribute="trailing" constant="20" id="R9G-ky-Qzz"/>
+                            <constraint firstItem="fvV-JE-mSo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="S6L-Kc-gS9"/>
+                            <constraint firstItem="HxR-3t-Z0J" firstAttribute="firstBaseline" secondItem="fvV-JE-mSo" secondAttribute="baseline" constant="22" symbolType="layoutAnchor" id="YuL-pV-PlI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fvV-JE-mSo" secondAttribute="trailing" constant="20" id="bxz-F6-Ns1"/>
+                            <constraint firstItem="HxR-3t-Z0J" firstAttribute="firstBaseline" secondItem="eSU-ql-b9x" secondAttribute="baseline" constant="22" symbolType="layoutAnchor" id="dIj-pS-ybw"/>
+                            <constraint firstItem="HxR-3t-Z0J" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="e1U-RU-aVm"/>
+                            <constraint firstItem="5fh-jB-V7D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kat-mc-RmG"/>
+                            <constraint firstItem="5fh-jB-V7D" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pFa-Bq-Olu"/>
+                            <constraint firstItem="pSW-Q5-aAS" firstAttribute="top" secondItem="5fh-jB-V7D" secondAttribute="bottom" constant="8" id="pQa-fp-56u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pSW-Q5-aAS" secondAttribute="trailing" constant="20" id="qh5-Ma-lKd"/>
+                            <constraint firstItem="pSW-Q5-aAS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tqZ-gU-OMB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonView" destination="HxR-3t-Z0J" id="Wkd-24-zbM"/>
+                        <outlet property="cmlView" destination="fvV-JE-mSo" id="Ajd-rV-rBN"/>
+                        <outlet property="imageView" destination="eSU-ql-b9x" id="GA9-kI-Lwd"/>
+                        <outlet property="palletView" destination="pSW-Q5-aAS" id="UDF-WT-hPB"/>
+                        <outlet property="segmentView" destination="5fh-jB-V7D" id="rMW-Uf-55B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="IE5-uS-WPi" userLabel="Pallet Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="palletTap:" destination="BYZ-38-t0r" id="lf9-NU-he0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="P7b-dO-LkS" userLabel="Pallet Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="palletLongTap:" destination="BYZ-38-t0r" id="lLw-5e-4nD"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="65N-ka-beb" userLabel="Image Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="imageDraw:" destination="BYZ-38-t0r" id="awv-ZY-LNd"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="IrY-by-I60" userLabel="Image Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="imageFloodFill:" destination="BYZ-38-t0r" id="yIV-4g-5Ib"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

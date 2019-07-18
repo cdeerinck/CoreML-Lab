@@ -12,6 +12,13 @@
 		13EBB7C122DE44340092448C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EBB7BF22DE44340092448C /* Main.storyboard */; };
 		13EBB7C322DE44360092448C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EBB7C222DE44360092448C /* Assets.xcassets */; };
 		13EBB7C622DE44360092448C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EBB7C422DE44360092448C /* LaunchScreen.storyboard */; };
+		13EBB7CE22DE7BE60092448C /* cgPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7CD22DE7BE60092448C /* cgPoint.swift */; };
+		13EBB7D622DE98CE0092448C /* setupPixels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7D522DE98CE0092448C /* setupPixels.swift */; };
+		13EBB7D822DE99BC0092448C /* RGBA32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7D722DE99BC0092448C /* RGBA32.swift */; };
+		13EBB7DA22DE9B9E0092448C /* closePixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7D922DE9B9E0092448C /* closePixel.swift */; };
+		13EBB7DC22DE9BC50092448C /* putPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7DB22DE9BC50092448C /* putPixel.swift */; };
+		13EBB7DE22DE9FD50092448C /* getPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7DD22DE9FD50092448C /* getPixel.swift */; };
+		13EBB7E122DEA07C0092448C /* floodFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7E022DEA07C0092448C /* floodFill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		13EBB7C222DE44360092448C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13EBB7C522DE44360092448C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13EBB7C722DE44360092448C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13EBB7CD22DE7BE60092448C /* cgPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cgPoint.swift; sourceTree = "<group>"; };
+		13EBB7D522DE98CE0092448C /* setupPixels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupPixels.swift; sourceTree = "<group>"; };
+		13EBB7D722DE99BC0092448C /* RGBA32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBA32.swift; sourceTree = "<group>"; };
+		13EBB7D922DE9B9E0092448C /* closePixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = closePixel.swift; sourceTree = "<group>"; };
+		13EBB7DB22DE9BC50092448C /* putPixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = putPixel.swift; sourceTree = "<group>"; };
+		13EBB7DD22DE9FD50092448C /* getPixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getPixel.swift; sourceTree = "<group>"; };
+		13EBB7E022DEA07C0092448C /* floodFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floodFill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,8 @@
 		13EBB7AF22DE44330092448C = {
 			isa = PBXGroup;
 			children = (
+				13EBB7E022DEA07C0092448C /* floodFill.swift */,
+				13EBB7DF22DE9FEF0092448C /* Pixel Stuff */,
 				13EBB7BA22DE44340092448C /* CoreML Lab */,
 				13EBB7B922DE44340092448C /* Products */,
 			);
@@ -56,12 +72,25 @@
 			children = (
 				13EBB7BB22DE44340092448C /* AppDelegate.swift */,
 				13EBB7BD22DE44340092448C /* ViewController.swift */,
-				13EBB7BF22DE44340092448C /* Main.storyboard */,
+				13EBB7CD22DE7BE60092448C /* cgPoint.swift */,
 				13EBB7C222DE44360092448C /* Assets.xcassets */,
+				13EBB7BF22DE44340092448C /* Main.storyboard */,
 				13EBB7C422DE44360092448C /* LaunchScreen.storyboard */,
 				13EBB7C722DE44360092448C /* Info.plist */,
 			);
 			path = "CoreML Lab";
+			sourceTree = "<group>";
+		};
+		13EBB7DF22DE9FEF0092448C /* Pixel Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				13EBB7D722DE99BC0092448C /* RGBA32.swift */,
+				13EBB7D522DE98CE0092448C /* setupPixels.swift */,
+				13EBB7DB22DE9BC50092448C /* putPixel.swift */,
+				13EBB7DD22DE9FD50092448C /* getPixel.swift */,
+				13EBB7D922DE9B9E0092448C /* closePixel.swift */,
+			);
+			path = "Pixel Stuff";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13EBB7CE22DE7BE60092448C /* cgPoint.swift in Sources */,
+				13EBB7D822DE99BC0092448C /* RGBA32.swift in Sources */,
 				13EBB7BE22DE44340092448C /* ViewController.swift in Sources */,
+				13EBB7DE22DE9FD50092448C /* getPixel.swift in Sources */,
+				13EBB7DA22DE9B9E0092448C /* closePixel.swift in Sources */,
+				13EBB7D622DE98CE0092448C /* setupPixels.swift in Sources */,
+				13EBB7DC22DE9BC50092448C /* putPixel.swift in Sources */,
 				13EBB7BC22DE44340092448C /* AppDelegate.swift in Sources */,
+				13EBB7E122DEA07C0092448C /* floodFill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +256,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -274,6 +311,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
