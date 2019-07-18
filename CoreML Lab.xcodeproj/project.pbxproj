@@ -19,6 +19,7 @@
 		13EBB7DC22DE9BC50092448C /* putPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7DB22DE9BC50092448C /* putPixel.swift */; };
 		13EBB7DE22DE9FD50092448C /* getPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7DD22DE9FD50092448C /* getPixel.swift */; };
 		13EBB7E122DEA07C0092448C /* floodFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB7E022DEA07C0092448C /* floodFill.swift */; };
+		13F86F2922E0E6E80006E1CD /* UIColor extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F86F2822E0E6E80006E1CD /* UIColor extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		13EBB7DB22DE9BC50092448C /* putPixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = putPixel.swift; sourceTree = "<group>"; };
 		13EBB7DD22DE9FD50092448C /* getPixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getPixel.swift; sourceTree = "<group>"; };
 		13EBB7E022DEA07C0092448C /* floodFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floodFill.swift; sourceTree = "<group>"; };
+		13F86F2822E0E6E80006E1CD /* UIColor extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				13EBB7BB22DE44340092448C /* AppDelegate.swift */,
 				13EBB7BD22DE44340092448C /* ViewController.swift */,
 				13EBB7CD22DE7BE60092448C /* cgPoint.swift */,
+				13F86F2822E0E6E80006E1CD /* UIColor extension.swift */,
 				13EBB7C222DE44360092448C /* Assets.xcassets */,
 				13EBB7BF22DE44340092448C /* Main.storyboard */,
 				13EBB7C422DE44360092448C /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F86F2922E0E6E80006E1CD /* UIColor extension.swift in Sources */,
 				13EBB7CE22DE7BE60092448C /* cgPoint.swift in Sources */,
 				13EBB7D822DE99BC0092448C /* RGBA32.swift in Sources */,
 				13EBB7BE22DE44340092448C /* ViewController.swift in Sources */,
