@@ -1,6 +1,6 @@
 //
 //  setupPixel
-//  CoreML Lab
+// CoreML Labx
 //
 //  Created by Chuck Deerinck on 7/16/19.
 //  Copyright © 2019 Chuck Deerinck. All rights reserved.
