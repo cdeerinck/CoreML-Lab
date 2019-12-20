@@ -1,6 +1,6 @@
 //
 //  UIColor extension.swift
-// CoreML Labx
+//  CoreML Lab
 //
 //  Created by Chuck Deerinck on 7/18/19.
 //  Copyright © 2019 Chuck Deerinck. All rights reserved.
